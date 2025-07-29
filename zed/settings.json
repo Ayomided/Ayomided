@@ -1,0 +1,598 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-twig-melody",
+      "@nsetyo/prettier-plugin-twig"
+    ]
+  },
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "icon_theme": "Material Icon Theme",
+  "show_edit_predictions": false,
+  "preferred_line_length": 160,
+  "private_files": [
+    "**/.env*",
+    "**/*.pem",
+    "**/*.key",
+    "**/*.cert",
+    "**/*.crt",
+    "**/secrets.yml"
+  ],
+  "file_types": {
+    "XML": [
+      "rdf",
+      "gpx",
+      "kml"
+    ]
+  },
+  "always_treat_brackets_as_autoclosed": true,
+  "show_call_status_icon": true,
+  "enable_language_server": true,
+  "linked_edits": true,
+  "gutter": {
+    "line_numbers": true,
+    "code_actions": true,
+    "runnables": true,
+    "folds": true
+  },
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 1,
+    "coloring": "fixed",
+    "background_coloring": "disabled"
+  },
+  "tabs": {
+    "close_position": "right",
+    "git_status": false,
+    "file_icons": true
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true
+  },
+  "preview_tabs": {
+    "enabled": true,
+    "enable_preview_from_file_finder": false,
+    "enable_preview_from_code_navigation": false
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true
+  },
+  "file_scan_exclusions": [
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db"
+  ],
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "diagnostics": "all"
+  },
+  "ui_font_family": "Maple Mono",
+  "ui_font_features": {
+    "calt": true
+  },
+  "buffer_font_family": "Maple Mono",
+  "buffer_font_features": {
+    "calt": true
+  },
+  "vim_mode": false,
+  "theme": {
+    "mode": "system",
+    "dark": "Fleet Dark",
+    "light": "Fleet Dark"
+  },
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "format_on_save": "on",
+  "formatter": "auto",
+  "soft_wrap": "prefer_line",
+  "autosave": "on_focus_change",
+  "inlay_hints": {
+    "enabled": true
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true
+    }
+  },
+  "ui_font_size": 15,
+  "buffer_font_size": 16.0,
+  "auto_install_extensions": {
+    "html": true
+  },
+  "languages": {
+    "Twig": {
+      "prettier": {
+        "allowed": true
+      },
+      "formatter": "prettier",
+      "language_servers": [
+        "tailwindcss-language-server",
+        "..."
+      ]
+    },
+    "Nim": {
+      "formatter": {
+        "external": {
+          "command": "nph",
+          "arguments": [
+            "-"
+          ]
+        }
+      }
+    },
+    "Markdown": {
+      "show_edit_predictions": true,
+      "soft_wrap": "preferred_line_length",
+      "remove_trailing_whitespace_on_save": false
+    },
+    "LaTeX": {
+      "show_edit_predictions": false,
+      "soft_wrap": "preferred_line_length",
+      "preferred_line_length": 110
+    },
+    "PHP": {
+      "prettier": {
+        "allowed": false,
+        "plugins": [
+          "@prettier/plugin-php"
+        ],
+        "parser": "php"
+      },
+      "language_servers": [
+        "intelephense",
+        "!phpactor",
+        "..."
+      ],
+      "format_on_save": "on",
+      "inlay_hints": {
+        "enabled": true
+      },
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.phpactor": true // does this do anything?
+      }
+    }
+  },
+  "ERB": {
+    "prettier": {
+      "allowed": true
+    },
+    "formatter": [
+      {
+        "external": {
+          "command": "htmlbeautifier",
+          "arguments": []
+        }
+      },
+      "prettier"
+    ],
+    "format_on_save": "on",
+    "always_treat_brackets_as_autoclosed": true,
+    "enable_language_server": true
+  },
+  "HTML": {
+    "prettier": {
+      "allowed": true
+    },
+    "format_on_save": "on",
+    "formatter": "prettier",
+    "always_treat_brackets_as_autoclosed": true,
+    "enable_language_server": true
+  },
+  "Python": {
+    "inlay_hints": {
+      "enabled": true
+    },
+    "format_on_save": "on",
+    "formatter": [
+      {
+        "language_server": {
+          "name": "ruff"
+        }
+      }
+    ],
+    "language_servers": [
+      "ruff",
+      "ty"
+    ]
+  },
+  "Ruby": {
+    "language_servers": [
+      "tailwindcss-language-server",
+      "solargraph",
+      "!rubocop",
+      "ruby-lsp",
+      "..."
+    ],
+    "formatter": "language_server",
+    "format_on_save": "on"
+  },
+  "Go": {
+    "format_on_save": {
+      "external": {
+        "command": "gofmt",
+        "arguments": []
+      }
+    }
+  },
+  "JSX": {
+    "inlay_hints": {
+      "enabled": true
+    },
+    "formatter": {
+      "language_server": {
+        "name": "biome"
+      }
+    },
+    "language_servers": [
+      "biome",
+      "eslint",
+      "typescript-language-server",
+      "!vtsls",
+      "..."
+    ],
+    "code_actions_on_format": {
+      "source.fixAll.biome": true,
+      "source.organizeImports.biome": true
+    }
+  },
+  "TSX": {
+    "inlay_hints": {
+      "enabled": true
+    },
+    "formatter": {
+      "language_server": {
+        "name": "biome"
+      }
+    },
+    "language_servers": [
+      "biome",
+      "eslint",
+      "typescript-language-server",
+      "!vtsls",
+      "..."
+    ],
+    "code_actions_on_format": {
+      "source.fixAll.biome": true,
+      "source.organizeImports.biome": true
+    }
+  },
+  "JavaScript": {
+    "prettier": {
+      "allowed": false
+    },
+    "inlay_hints": {
+      "enabled": true
+    },
+    "formatter": {
+      "language_server": {
+        "name": "biome"
+      }
+    },
+    "language_servers": [
+      "biome",
+      "eslint",
+      "typescript-language-server",
+      "!vtsls",
+      "..."
+    ],
+    "code_actions_on_format": {
+      "source.fixAll.biome": true,
+      "source.organizeImports.biome": true
+    }
+  },
+  "TypeScript": {
+    "prettier": {
+      "allowed": false
+    },
+    "inlay_hints": {
+      "enabled": true
+    },
+    "formatter": {
+      "language_server": {
+        "name": "biome"
+      }
+    },
+    "language_servers": [
+      "biome",
+      "eslint",
+      "typescript-language-server",
+      "!vtsls",
+      "..."
+    ],
+    "code_actions_on_format": {
+      "source.fixAll.biome": true,
+      "source.organizeImports.biome": true
+    }
+  },
+  "HEEX": {
+    "language_servers": [
+      "tailwindcss-language-server",
+      "next-ls",
+      "!lexical",
+      "!elixir-ls",
+      "..."
+    ]
+  },
+  "Swift": {
+    "enable_language_server": true,
+    "language_servers": [
+      "sourcekit-lsp"
+    ],
+    "formatter": "language_server",
+    "format_on_save": "on",
+    "tab_size": 2
+  },
+  "Elixir": {
+    "format_on_save": {
+      "external": {
+        "command": "mix",
+        "arguments": [
+          "format",
+          "--stdin-filename",
+          "{buffer_path}",
+          "-"
+        ]
+      }
+    },
+    "language_servers": [
+      "next-ls",
+      "!elixir-ls",
+      "!lexical",
+      "..."
+    ]
+  },
+  "tailwindcss-language-server": {
+    "settings": {
+      "includeLanguages": {
+        "twig": "html"
+      },
+      "classAttributes": [
+        "class",
+        "className",
+        "ngClass",
+        "styles"
+      ]
+    }
+  },
+  "JSON": {
+    "tab_size": 4
+  },
+  "lsp": {
+    "tinymist": {
+      "initialization_options": {
+        "preview": {
+          "background": {
+            "enabled": true
+          }
+        }
+      }
+    },
+    "deno": {
+      "settings": {
+        "deno": {
+          "enable": true,
+          "suggest": {
+            "imports": {
+              "autoDiscover": true,
+              "autoImports": true,
+              "hosts": {
+                "https://deno.land": true,
+                "https://jsr.io": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "intelephense": {
+      "initialization_options": {
+        "licenceKey": "intelephense-license.txt"
+      }
+    },
+    "gleam": {},
+    "elm-language-server": {
+      "initialization_options": {
+        "disableElmLSDiagnostics": false,
+        "onlyUpdateDiagnosticsOnSave": true,
+        "elmReviewDiagnostics": "warning"
+      }
+    },
+    // "pylsp": {
+    //   "settings": {
+    //     "plugins": {
+    //       "pycodestyle": {
+    //         "enabled": false
+    //       },
+    //       "flake8": {
+    //         "enabled": false
+    //       }
+    //     }
+    //   }
+    // },
+    "sourcekit-lsp": {
+      "binary": {
+        // "path": "/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp"
+        "path": "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"
+      }
+    },
+    // "live-server-lsp": {
+    //   "lazy": "false",
+    //   "public": "false",
+    //   "start_port": 6969
+    // },
+    "jdtls": {
+      "initialization_options": {
+        "bundles": [],
+        "settings": {
+          "java": {
+            "errors": {
+              "incompleteClasspath": {
+                "severity": "warning"
+              }
+            },
+            "configuration": {
+              "updateBuildConfiguration": "interactive",
+              "maven": {
+                "userSettings": null
+              }
+            },
+            "trace": {
+              "server": "verbose"
+            },
+            "import": {
+              "gradle": {
+                "enabled": true
+              },
+              "maven": {
+                "enabled": true
+              },
+              "exclusions": [
+                "**/node_modules/**",
+                "**/.metadata/**",
+                "**/archetype-resources/**",
+                "**/META-INF/maven/**",
+                "/**/test/**"
+              ]
+            },
+            "referencesCodeLens": {
+              "enabled": false
+            },
+            "signatureHelp": {
+              "enabled": false
+            },
+            "implementationsCodeLens": {
+              "enabled": false
+            },
+            "format": {
+              "enabled": true
+            },
+            "saveActions": {
+              "organizeImports": false
+            },
+            "contentProvider": {
+              "preferred": null
+            },
+            "autobuild": {
+              "enabled": false
+            },
+            "completion": {
+              "favoriteStaticMembers": [
+                "org.junit.Assert.*",
+                "org.junit.Assume.*",
+                "org.junit.jupiter.api.Assertions.*",
+                "org.junit.jupiter.api.Assumptions.*",
+                "org.junit.jupiter.api.DynamicContainer.*",
+                "org.junit.jupiter.api.DynamicTest.*"
+              ],
+              "importOrder": [
+                "java",
+                "javax",
+                "com",
+                "org"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "gopls": {
+      "initialization_options": {
+        "usePlaceholders": false,
+        "completeUnimported": true,
+        "experimentalPostfixCompletions": true,
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    },
+    "biome": {
+      "settings": {
+        "require_config_file": false
+      }
+    },
+    "oxc": {
+      "settings": {
+        "require_config_file": false
+      }
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayVariableTypeHintsWhenTypeMatchesName": false,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true,
+          "includeInlayEnumMemberValueHints": true,
+          "includeInlayEnumMemberDeclarationTypes": true
+        }
+      }
+    },
+    "solargraph": {
+      "initialization_options": {
+        "diagnostics": true,
+        "formatting": true
+      }
+    },
+    "ruby-lsp": {
+      "initialization_options": {
+        "enabledFeatures": {
+          "diagnostics": false
+        }
+      }
+    },
+    "rubocop": {
+      "initialization_options": {
+        "safeAutocorrect": false
+      }
+    },
+    "ty": {
+      "binary": {
+        "path": "/Users/david/.local/bin/ty",
+        "arguments": [
+          "server"
+        ]
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "plaintext": "html",
+          "erb": "html",
+          "ruby": "html",
+          "go": "gohtml",
+          "blade": "html"
+        }
+      }
+    }
+  }
+}
